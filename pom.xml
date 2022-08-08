@@ -30,25 +30,23 @@
 				<artifactId>mule-maven-plugin</artifactId>
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
-				<configuration>
-					<cloudHubDeployment>
-						<uri>https://anypoint.mulesoft.com</uri>
-						<muleVersion>4.4.0</muleVersion>
-						<username>Gautam888</username>
-						<password>Gautam333</password>
-						<environment>Sandbox</environment>
-						<applicationName>mulesoft-cicd-demo-uppal</applicationName>
-						<businessGroup>Hashedin by Deloitte</businessGroup>
-						<workerType>Micro</workerType>
-						<workers>1</workers>
-						<objectStoreV2>true</objectStoreV2>
-
-					        <properties>
-      						 <key>value</key>
-   					        </properties>
-					</cloudHubDeployment>
-				<classifier>mule-application</classifier>	
-				</configuration>
+			
+				  <configuration>
+				    <cloudHubDeployment>
+				      <uri>https://anypoint.mulesoft.com</uri>;
+				      <muleVersion>${app.runtime}</muleVersion>
+				      <username>${username}</username>
+				      <password>${password}</password>
+				      <applicationName>${cloudhub.application.name}</applicationName>
+				      <environment>${environment}</environment>
+				      <region>${region}</region>
+				      <workers>${workers}</workers>
+				      <workerType>${workerType}</workerType>
+				      <properties>
+				        <key>value</key>
+				      </properties>
+				    </cloudHubDeployment>
+				  </configuration>
 			</plugin>
 		</plugins>
 	</build>
